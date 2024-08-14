@@ -9,13 +9,15 @@ export interface IInputProps {
   require?: boolean;
   placeholder: string;
   color?: string;
+  width: string;
+  heigth: string;
 }
 
 export function Input(props: IInputProps) {
-  const { borderRadius, color, labelText, id, type, require, placeholder } = props;
+  const { borderRadius, color, labelText, id, type, require, placeholder, width, heigth } = props;
   return (
-    <section className={`rounded${borderRadius} bg-${color}`}>
-      <label htmlFor="" className="text-xs text-gray-600">
+    <section className={`flex flex-col ${color} ${width}`}>
+      <label htmlFor="" className="">
         {labelText}
       </label>
 
@@ -25,7 +27,7 @@ export function Input(props: IInputProps) {
         id={id}
         name="update"
         placeholder={placeholder}
-        className="bg-light-blue w-full py-1 px-3 mt-1 outline-none"
+        className={`${borderRadius} border py-3 px-5 ${heigth}`}
       />
     </section>
   );

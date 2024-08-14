@@ -1,17 +1,10 @@
-import * as React from "react";
-import { Input } from "../components/Input";
+import React from "react";
+import { Form } from "../containers/Form";
 
 export function MainView() {
   return (
     <div>
-      <Input
-        labelText={"Email"}
-        id={"email"}
-        type={"text"}
-        placeholder={"ingrese email"}
-        require={true}
-        borderRadius={"md"}
-      />
+      <Form title="Book Appointment" />
     </div>
   );
 }
